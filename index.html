@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div>
+        <div class="mainpage">
+           
+            <form action=""id="bill" class="bill" >
+                <h1>calculate your tip here</h1>
+                <input id="amount" type="number" class="input_num" required placeholder="enter your amount">
+                
+                <input id="tip" type="number" class="input_num" required placeholder="enter your tip in percent">
+                <button class="submit-button" id="button"  type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+<script>
+  
+   
+    btn.addEventListener("click",()=>{
+        const  btn=document.getElementById("button")
+        let a=document.getElementById("amount");
+
+            let b=document.getElementById("tip");
+            let value1=a.value;
+            let value2=b.value
+            let calculationOfTip= ((value1*value2)/100) + value1;
+            let html=document.getElementById("bill")
+            let text=document.createTextNode(calculationOfTip)
+            html.append(text)
+            console.log("coorect");
+    })
+   
+   
+
+</script>
+</html>
